@@ -13,7 +13,6 @@ def main():
     direccionx = 20
     direcciony = 90
 
-
     while True:
 
         ventana.fill((0, 0, 0))
