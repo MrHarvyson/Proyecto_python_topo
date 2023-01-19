@@ -1,6 +1,5 @@
 import random
 
-
 class Supertopo:
     casilla = 0
     direcion = 1

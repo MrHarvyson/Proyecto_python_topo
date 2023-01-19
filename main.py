@@ -20,5 +20,6 @@ while movimientoPlayer != 'stop' and int(jugador.get_casilla()) <= 30:
     for topo in lista_topos:
         print(supertopo.mover())
 
-    if jugador.get_casilla() == supertopo.getSitio():
-        print('Perdiste')
+        if jugador.get_casilla() == supertopo.getSitio():
+
+            print('Perdiste')
