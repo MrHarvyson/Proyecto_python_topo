@@ -14,7 +14,6 @@ def main():
     direccion_personaje_y = 90
 
 
-
     while True:
 
         ventana.fill((0, 0, 0))
