@@ -7,6 +7,9 @@ movimientoPlayer = ""
 nombre = (input('Hola, ¿Cómo te llamas?: '))
 jugador = Jugador(nombre, 1)
 
+camino = "______________________________"
+
+
 lista_topos = []
 
 for i in range(4):
