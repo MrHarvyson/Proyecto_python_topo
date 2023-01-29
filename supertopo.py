@@ -1,5 +1,6 @@
 import random
 
+
 class Supertopo:
     casilla = 0
     direcion = 1
@@ -17,5 +18,5 @@ class Supertopo:
 
         return self.casilla
 
-    def getSitio(self):
+    def get_sitio(self):
         return self.casilla

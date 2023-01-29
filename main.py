@@ -1,14 +1,10 @@
-
-
 from jugador import Jugador
 from supertopo import Supertopo
 
 movimientoPlayer = ""
-nombre = (input('Hola, ¿Cómo te llamas?: '))
+nombre = input('Hola, ¿Cómo te llamas?: ')
 jugador = Jugador(nombre, 1)
-
-camino = "______________________________"
-
+cadena = "______________________________"
 
 lista_topos = []
 
@@ -17,12 +13,47 @@ for i in range(4):
     supertopo.__int__()
     lista_topos.append(supertopo)
 
-while movimientoPlayer != 'stop' and int(jugador.get_casilla()) <= 30:
-    movimientoPlayer = (input(nombre + ' , ¿Cúanto quieres avanzar, 1 o 2 pasos?: '))
-    print(jugador.mover(int(movimientoPlayer)))
-    for topo in lista_topos:
-        print(supertopo.mover())
+y = list(cadena)
+y[jugador.get_casilla() - 1] = 'X'
+cadena = "".join(y)
 
-        if jugador.get_casilla() == supertopo.getSitio():
+for topo in lista_topos:
+    y = list(cadena)
+    y[topo.get_sitio()] = 'O'
+    cadena = "".join(y)
 
-            print('Perdiste')
+print(cadena)
+
+while jugador.get_casilla() <= 30:
+
+    try:
+        movimientoPlayer = input(nombre + ' , ¿Cúanto quieres avanzar, 1 o 2 pasos?: ')
+        cadena = "______________________________"
+        if int(movimientoPlayer) == 1 or int(movimientoPlayer) == 2:
+            # print(jugador.mover(int(movimientoPlayer)))
+            jugador.mover(int(movimientoPlayer))
+            l = list(cadena)
+            l[jugador.get_casilla() - 1] = 'X'
+            cadena = "".join(l)
+
+            for topo in lista_topos:
+                if 0 < topo.get_sitio() < 30:
+                    print(topo.mover())
+                    # topo.mover()
+                    f = list(cadena)
+                    f[topo.get_sitio() - 1] = 'O'
+                    cadena = "".join(f)
+                    # print(cadena)
+                    if jugador.get_casilla() == topo.get_sitio():
+                        print('Perdiste')
+                        break
+            print(cadena)
+            cadena = "______________________________"
+        else:
+            print("Debe ser 1 o 2")
+
+    except ValueError:
+        if movimientoPlayer == 'stop':
+            break
+        else:
+            print("Error, no es un número")
