@@ -7,15 +7,15 @@ cadena = "______________________________"
 lista_topos = []
 perder = False
 
-nombre = input('Hola, ¿Cómo te llamas?: ')
+nombre = input('Hola¡, Bienvenido a TOPOLLÍN. Tendrás que llegar a la casilla 30 sin toparte con ningún topo.'
+               'Cuando quieras terminar de jugar escriba STOP. Empecemos¡¡¡¡\n¿Cómo te llamas?: ')
 
 # inicializamos jugador
 jugador = Jugador(nombre, 1)
 
 # inicializamos topos y agregamos a lista
 for i in range(4):
-    supertopo = Supertopo()
-    supertopo.__int__()
+    supertopo = Supertopo(10, 20)
     lista_topos.append(supertopo)
 
 # colocamos jugador en grafico
@@ -30,6 +30,9 @@ for topo in lista_topos:
     cadena = "".join(y)
 
 # imprimimos grafico
+# print(jugador.get_sitio())
+# for topo in lista_topos:
+#    print(topo.get_sitio())
 print('Iniciamos¡¡¡ ' + cadena)
 
 # condicion mientras jugador no llegue a meta o pierda:

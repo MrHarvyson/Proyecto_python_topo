@@ -6,8 +6,8 @@ class Supertopo:
     direcion = 1
 
     # inicializa a los topos
-    def __int__(self):
-        self.casilla = random.randint(10, 20)
+    def __init__(self, ini, fin):
+        self.casilla = random.randint(ini, fin)
 
     # mueve a los topos
     def mover(self):
