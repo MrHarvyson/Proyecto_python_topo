@@ -5,9 +5,11 @@ class Supertopo:
     casilla = 0
     direcion = 1
 
+    # inicializa a los topos
     def __int__(self):
         self.casilla = random.randint(10, 20)
 
+    # mueve a los topos
     def mover(self):
         random_numero = random.randint(1, 3)
         self.direcion = random.randint(1, 2)
@@ -18,5 +20,6 @@ class Supertopo:
 
         return self.casilla
 
+    # devuelve la posicion de los topos
     def get_sitio(self):
         return self.casilla
