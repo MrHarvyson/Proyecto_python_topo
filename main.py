@@ -8,13 +8,14 @@ lista_topos = []
 perder = False
 
 nombre = input('Hola¡, Bienvenido a TOPOLLÍN. Tendrás que llegar a la casilla 30 sin toparte con ningún topo.'
-               'Cuando quieras terminar de jugar escriba STOP. Empecemos¡¡¡¡\n¿Cómo te llamas?: ')
+               'Cuando quieras terminar de jugar escriba STOP.\nEl jugador se representará con una J y los topos con una'
+               ' T. Empecemos¡¡¡¡\n¿Cómo te llamas?: ')
 
 # inicializamos jugador
 jugador = Jugador(nombre, 1)
 
 # inicializamos topos y agregamos a lista
-for i in range(4):
+for i in range(5):
     supertopo = Supertopo(10, 20)
     lista_topos.append(supertopo)
 
