@@ -1,8 +1,0 @@
-madriguera02 = pygame.draw.rect(ventana, (255, 255, 255), pygame.Rect(32, 100, 10, 2))
-        madriguera03 = pygame.draw.rect(ventana, (255, 255, 255), pygame.Rect(44, 100, 10, 2))
-        madriguera04 = pygame.draw.rect(ventana, (255, 255, 255), pygame.Rect(56, 100, 10, 2))
-        madriguera06 = pygame.draw.rect(ventana, (255, 255, 255), pygame.Rect(68, 100, 10, 2))
-        madriguera07 = pygame.draw.rect(ventana, (255, 255, 255), pygame.Rect(80, 100, 10, 2))
-        madriguera08 = pygame.draw.rect(ventana, (255, 255, 255), pygame.Rect(92, 100, 10, 2))
-        madriguera09 = pygame.draw.rect(ventana, (255, 255, 255), pygame.Rect(104, 100, 10, 2))
-        madriguera10 = pygame.draw.rect(ventana, (255, 255, 255), pygame.Rect(116, 100, 10, 2))
