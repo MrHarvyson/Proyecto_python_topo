@@ -37,7 +37,7 @@ for topo in lista_topos:
 print('Iniciamos¡¡¡ ' + cadena)
 
 # condicion mientras jugador no llegue a meta o pierda:
-while jugador.get_sitio() <= 30 and perder == False:
+while jugador.get_sitio() < 30 and perder == False:
 
     # cubre el caso en el que se introduzca texto y no sea stop, si es stop saldra del programa, trata dos excepciones
     try:
